@@ -1,17 +1,23 @@
 import turtle
-def drec():
+def drec(d, r):
 
     rec = turtle.Turtle()
+    rec.left(90)
+    rec.color("red")
+    print(type(rec.color()))
+    # p = rec.color()
 
-    d = int(input("nhập vào chiều dài của hình chữ nhật: d = "))
-    r = int(input("Nhập vào chiều rộng của hình chữ nhật: r = "))
+    rec.begin_fill()
     for i in range(1,5,1):
         if i % 2 != 0:
             rec.forward(d)
-            rec.left(90)
+            rec.right(90)
         elif i % 2 ==0:
             rec.forward(r)
-            rec.left(90)
+            rec.right(90)
+    rec.end_fill()
     turtle.done()
 
-drec()
+drec(100,90)
+
+
